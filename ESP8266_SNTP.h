@@ -23,12 +23,14 @@
 #include "gpio.h"
 #include "os_type.h"
 #include "mem.h"
+#include "string.h"
+#include "stdio.h"
 #include "user_interface.h"
 
 #define ESP8266_SNTP_RETRIES_COUNT 5
 
 //CUSTOM VARIABLE STRUCTURES/////////////////////////////
-typedef struct
+/*typedef struct
 {
   char year[5];
   char month[4];
@@ -37,6 +39,16 @@ typedef struct
   char hour[3];
   char minute[3];
   char second[3];
+} ESP8266_SNTP_TIME_COMPONENTS;*/
+typedef struct
+{
+  uint16_t year;
+  char month[4];
+  uint8_t date;
+  char day[4];
+  uint8_t hour;
+  uint8_t minute;
+  uint8_t second;
 } ESP8266_SNTP_TIME_COMPONENTS;
 //END CUSTOM VARIABLE STRUCTURES/////////////////////////
 

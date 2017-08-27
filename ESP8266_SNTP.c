@@ -197,13 +197,19 @@ ESP8266_SNTP_TIME_COMPONENTS* ICACHE_FLASH_ATTR ESP8266_SNTP_GetTimeComponents(c
 	char* min = strtok(NULL, ":");
 	char* sec = strtok(NULL, ":");
 
-	strcpy(ptr->year, year);
+	//strcpy(ptr->year, year);
 	strcpy(ptr->month, month);
-	strcpy(ptr->date, date);
+	//strcpy(ptr->date, date);
 	strcpy(ptr->day, weekday);
-	strcpy(ptr->hour, hour);
-	strcpy(ptr->minute, min);
-	strcpy(ptr->second, sec);
+	//strcpy(ptr->hour, hour);
+	//strcpy(ptr->minute, min);
+	//strcpy(ptr->second, sec);
+
+	ptr->year = atoi(year);
+	ptr->date = atoi(date);
+	ptr->hour = atoi(hour);
+	ptr->minute = atoi(min);
+	ptr->second = atoi(sec);
 
 	return ptr;
 }
