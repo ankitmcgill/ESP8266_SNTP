@@ -30,16 +30,6 @@
 #define ESP8266_SNTP_RETRIES_COUNT 5
 
 //CUSTOM VARIABLE STRUCTURES/////////////////////////////
-/*typedef struct
-{
-  char year[5];
-  char month[4];
-  char date[3];
-  char day[4];
-  char hour[3];
-  char minute[3];
-  char second[3];
-} ESP8266_SNTP_TIME_COMPONENTS;*/
 typedef struct
 {
   uint16_t year;
